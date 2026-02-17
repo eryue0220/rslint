@@ -580,6 +580,12 @@ func GetNameFromMember(sourceFile *ast.SourceFile, member *ast.Node) (string, Me
 		return member.AsIdentifier().Text, MemberNameTypeNormal
 	case ast.KindPrivateIdentifier:
 		return member.AsPrivateIdentifier().Text, MemberNameTypePrivate
+	case ast.KindStringLiteral, ast.KindNoSubstitutionTemplateLiteral:
+		return member.Text(), MemberNameTypeNormal
+	case ast.KindNumericLiteral:
+		return member.AsNumericLiteral().Text, MemberNameTypeNormal
+	case ast.KindBigIntLiteral:
+		return member.AsBigIntLiteral().Text, MemberNameTypeNormal
 	case ast.KindComputedPropertyName:
 		expr := member.AsComputedPropertyName().Expression
 		// TODO(port): support boolean keywords, null keywords, etc
