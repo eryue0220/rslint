@@ -13,6 +13,7 @@ func TestNoDupeKeysRule(t *testing.T) {
 		"tsconfig.json",
 		t,
 		&NoDupeKeysRule,
+		// Valid cases - ported from ESLint
 		[]rule_tester.ValidTestCase{
 			{Code: "var foo = { __proto__: 1, two: 2};"},
 			{Code: "var x = { foo: 1, bar: 2 };"},
@@ -45,6 +46,7 @@ func TestNoDupeKeysRule(t *testing.T) {
 			// Syntax Error: Octal literals are not allowed
 			// {Code: "var x = { 012: 1, 12: 2 };"},
 		},
+		// Invalid cases - ported from ESLint
 		[]rule_tester.InvalidTestCase{
 			{
 				Code: "var x = { a: b, ['a']: b };",
