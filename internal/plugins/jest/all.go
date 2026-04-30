@@ -9,6 +9,7 @@ import (
 	"github.com/web-infra-dev/rslint/internal/plugins/jest/rules/no_mocks_import"
 	"github.com/web-infra-dev/rslint/internal/plugins/jest/rules/no_test_prefixes"
 	"github.com/web-infra-dev/rslint/internal/plugins/jest/rules/prefer_strict_equal"
+	"github.com/web-infra-dev/rslint/internal/plugins/jest/rules/prefer_to_contain"
 	"github.com/web-infra-dev/rslint/internal/plugins/jest/rules/prefer_to_have_length"
 	"github.com/web-infra-dev/rslint/internal/plugins/jest/rules/prefer_todo"
 	"github.com/web-infra-dev/rslint/internal/plugins/jest/rules/valid_describe_callback"
@@ -25,6 +26,7 @@ func GetAllRules() []rule.Rule {
 		no_mocks_import.NoMocksImportRule,
 		no_test_prefixes.NoTestPrefixesRule,
 		prefer_strict_equal.PreferStrictEqualRule,
+		prefer_to_contain.PreferToContainRule,
 		prefer_to_have_length.PreferToHaveLengthRule,
 		prefer_todo.PreferTodoRule,
 		valid_describe_callback.ValidDescribeCallbackRule,
