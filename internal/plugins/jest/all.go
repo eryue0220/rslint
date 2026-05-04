@@ -4,6 +4,7 @@ import (
 	"github.com/web-infra-dev/rslint/internal/plugins/jest/rules/no_alias_methods"
 	"github.com/web-infra-dev/rslint/internal/plugins/jest/rules/no_deprecated_functions"
 	"github.com/web-infra-dev/rslint/internal/plugins/jest/rules/no_disabled_tests"
+	"github.com/web-infra-dev/rslint/internal/plugins/jest/rules/no_done_callback"
 	"github.com/web-infra-dev/rslint/internal/plugins/jest/rules/no_focused_tests"
 	"github.com/web-infra-dev/rslint/internal/plugins/jest/rules/no_hooks"
 	"github.com/web-infra-dev/rslint/internal/plugins/jest/rules/no_mocks_import"
@@ -21,6 +22,7 @@ func GetAllRules() []rule.Rule {
 		no_alias_methods.NoAliasMethodsRule,
 		no_disabled_tests.NoDisabledTestsRule,
 		no_deprecated_functions.NoDeprecatedFunctionsRule,
+		no_done_callback.NoDoneCallbackRule,
 		no_focused_tests.NoFocusedTestsRule,
 		no_hooks.NoHooksRule,
 		no_mocks_import.NoMocksImportRule,
