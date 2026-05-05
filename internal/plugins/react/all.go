@@ -6,6 +6,7 @@ import (
 	"github.com/web-infra-dev/rslint/internal/plugins/react/rules/forbid_component_props"
 	"github.com/web-infra-dev/rslint/internal/plugins/react/rules/forbid_dom_props"
 	"github.com/web-infra-dev/rslint/internal/plugins/react/rules/forbid_elements"
+	"github.com/web-infra-dev/rslint/internal/plugins/react/rules/forbid_prop_types"
 	"github.com/web-infra-dev/rslint/internal/plugins/react/rules/jsx_boolean_value"
 	"github.com/web-infra-dev/rslint/internal/plugins/react/rules/jsx_closing_tag_location"
 	"github.com/web-infra-dev/rslint/internal/plugins/react/rules/jsx_equals_spacing"
@@ -65,6 +66,7 @@ func GetAllRules() []rule.Rule {
 		forbid_component_props.ForbidComponentPropsRule,
 		forbid_dom_props.ForbidDomPropsRule,
 		forbid_elements.ForbidElementsRule,
+		forbid_prop_types.ForbidPropTypesRule,
 		jsx_boolean_value.JsxBooleanValueRule,
 		jsx_closing_tag_location.JsxClosingTagLocationRule,
 		jsx_equals_spacing.JsxEqualsSpacingRule,
